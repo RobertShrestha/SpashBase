@@ -256,22 +256,27 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbJ-Yl-CpW">
-                                <rect key="frame" x="177" y="158.5" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ZbJ-Yl-CpW" secondAttribute="height" multiplier="1:1" id="Sv5-72-r8R"/>
-                                    <constraint firstAttribute="width" constant="60" id="k0E-59-jXs"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="PlayIcon"/>
+                                <rect key="frame" x="0.0" y="54" width="414" height="269"/>
                                 <connections>
                                     <action selector="playBtnTapped:" destination="uK3-By-KCg" eventType="touchUpInside" id="ksX-uX-WYy"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="HbZ-75-wew">
+                                <rect key="frame" x="177" y="158.5" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="hzB-9t-gYr"/>
+                                    <constraint firstAttribute="width" constant="60" id="r4K-Sv-bdx"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ZbJ-Yl-CpW" firstAttribute="height" secondItem="ieL-2u-2bj" secondAttribute="height" id="59a-VL-F0f"/>
                             <constraint firstItem="ieL-2u-2bj" firstAttribute="top" secondItem="Y9B-wq-xBd" secondAttribute="top" constant="10" id="5SC-EM-fKq"/>
                             <constraint firstItem="fQB-wC-uX8" firstAttribute="leading" secondItem="Y9B-wq-xBd" secondAttribute="leading" id="5zD-4F-8CT"/>
+                            <constraint firstItem="HbZ-75-wew" firstAttribute="centerY" secondItem="ieL-2u-2bj" secondAttribute="centerY" id="6VC-yS-0AD"/>
                             <constraint firstItem="ZbJ-Yl-CpW" firstAttribute="centerX" secondItem="ieL-2u-2bj" secondAttribute="centerX" id="84B-Xf-bFd"/>
+                            <constraint firstItem="ZbJ-Yl-CpW" firstAttribute="width" secondItem="ieL-2u-2bj" secondAttribute="width" id="IgM-4v-RJQ"/>
                             <constraint firstItem="Rh6-jb-m6a" firstAttribute="leading" secondItem="fQB-wC-uX8" secondAttribute="leading" id="J28-6I-6Ii"/>
                             <constraint firstItem="fQB-wC-uX8" firstAttribute="top" secondItem="WPY-VB-klN" secondAttribute="bottom" constant="10" id="KcK-Cp-80I"/>
                             <constraint firstItem="Y9B-wq-xBd" firstAttribute="trailing" secondItem="WPY-VB-klN" secondAttribute="trailing" constant="20" id="Kpz-f1-e5V"/>
@@ -283,6 +288,7 @@
                             <constraint firstItem="Rh6-jb-m6a" firstAttribute="bottom" secondItem="fQB-wC-uX8" secondAttribute="bottom" id="bR1-Me-oDe"/>
                             <constraint firstItem="Rh6-jb-m6a" firstAttribute="trailing" secondItem="fQB-wC-uX8" secondAttribute="trailing" id="dsr-8i-NsX"/>
                             <constraint firstItem="Rh6-jb-m6a" firstAttribute="top" secondItem="ieL-2u-2bj" secondAttribute="bottom" id="ewg-Vy-zcI"/>
+                            <constraint firstItem="HbZ-75-wew" firstAttribute="centerX" secondItem="ieL-2u-2bj" secondAttribute="centerX" id="lc2-nS-6Mg"/>
                             <constraint firstItem="ZbJ-Yl-CpW" firstAttribute="centerY" secondItem="ieL-2u-2bj" secondAttribute="centerY" id="mNP-13-Gec"/>
                             <constraint firstItem="WPY-VB-klN" firstAttribute="top" secondItem="55G-UB-yW9" secondAttribute="bottom" constant="10" id="p2t-Ym-eBz"/>
                             <constraint firstItem="WPY-VB-klN" firstAttribute="leading" secondItem="Y9B-wq-xBd" secondAttribute="leading" constant="20" id="p8h-Zg-lVn"/>
@@ -296,13 +302,57 @@
                         <outlet property="favouriteBtn" destination="eDF-zN-1Fd" id="FIE-7a-b2S"/>
                         <outlet property="imageView" destination="ieL-2u-2bj" id="vIL-4N-LeU"/>
                         <outlet property="nameLblTxt" destination="55G-UB-yW9" id="SWA-Sj-oQw"/>
-                        <outlet property="playBtn" destination="ZbJ-Yl-CpW" id="Ho0-cc-JgR"/>
+                        <outlet property="playBtn" destination="HbZ-75-wew" id="YWW-MJ-ETA"/>
                         <outlet property="sourceLblTxt" destination="3GE-wT-ZF2" id="g0e-GG-GJl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UG3-VH-Fb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1746.376811594203" y="131.91964285714286"/>
+        </scene>
+        <!--Custom Image Viewer View Controller-->
+        <scene sceneID="A28-oi-dBd">
+            <objects>
+                <viewController storyboardIdentifier="CustomImageViewerViewController" id="hJy-RQ-PFH" customClass="CustomImageViewerViewController" customModule="SplashBase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nm7-tP-j4b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgE-lX-sZ5">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Le-8y-4Pg">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="0Le-8y-4Pg" firstAttribute="top" secondItem="jgE-lX-sZ5" secondAttribute="top" id="2qn-7c-Pbi"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Le-8y-4Pg" secondAttribute="bottom" id="Dmr-sp-An5"/>
+                                    <constraint firstItem="0Le-8y-4Pg" firstAttribute="centerX" secondItem="jgE-lX-sZ5" secondAttribute="centerX" id="MoZ-EX-1IM"/>
+                                    <constraint firstItem="0Le-8y-4Pg" firstAttribute="leading" secondItem="jgE-lX-sZ5" secondAttribute="leading" id="PbY-af-9FZ"/>
+                                    <constraint firstItem="0Le-8y-4Pg" firstAttribute="centerY" secondItem="jgE-lX-sZ5" secondAttribute="centerY" id="bBI-z4-5NS"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Le-8y-4Pg" secondAttribute="trailing" id="lqz-Zr-ykh"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jgE-lX-sZ5" firstAttribute="leading" secondItem="xA3-2e-nqx" secondAttribute="leading" id="88y-Su-Jbx"/>
+                            <constraint firstItem="xA3-2e-nqx" firstAttribute="bottom" secondItem="jgE-lX-sZ5" secondAttribute="bottom" id="K5X-3e-oPa"/>
+                            <constraint firstItem="jgE-lX-sZ5" firstAttribute="top" secondItem="xA3-2e-nqx" secondAttribute="top" id="ehD-3M-db0"/>
+                            <constraint firstItem="xA3-2e-nqx" firstAttribute="trailing" secondItem="jgE-lX-sZ5" secondAttribute="trailing" id="oco-wg-haM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xA3-2e-nqx"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="0Le-8y-4Pg" id="iKM-kD-Uda"/>
+                        <outlet property="scrollView" destination="jgE-lX-sZ5" id="z3g-qd-8WC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="twj-hy-FVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2381" y="128"/>
         </scene>
     </scenes>
     <resources>

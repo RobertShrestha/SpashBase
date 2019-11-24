@@ -16,3 +16,10 @@ class DetailRouter: NSObject {
         return viewController
     }
 }
+extension DetailRouter{
+    func gotoImageViewer(navigationContoller:UINavigationController,imageURL:String){
+        let vc:CustomImageViewerViewController = CustomImageViewerViewController.instantiate()
+        vc.imageURL = imageURL
+        navigationContoller.pushViewController(vc, animated: true)
+    }
+}

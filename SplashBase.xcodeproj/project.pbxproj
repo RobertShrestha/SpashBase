@@ -22,6 +22,7 @@
 		E1352C992389163E00CAB39B /* MainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1352C982389163E00CAB39B /* MainConstants.swift */; };
 		E1352C9C2389174E00CAB39B /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1352C9B2389174E00CAB39B /* UIViewController+Extensions.swift */; };
 		E1352C9E238917BE00CAB39B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1352C9D238917BE00CAB39B /* UITableView+Extension.swift */; };
+		E19C12C7238A6142004314C8 /* CutomImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C12C6238A6142004314C8 /* CutomImageViewerViewController.swift */; };
 		E19DCC70238958080049124A /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19DCC6D238958080049124A /* DetailRouter.swift */; };
 		E19DCC71238958080049124A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19DCC6E238958080049124A /* DetailViewController.swift */; };
 		E19DCC72238958080049124A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19DCC6F238958080049124A /* DetailViewModel.swift */; };
@@ -67,6 +68,7 @@
 		E1352C982389163E00CAB39B /* MainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstants.swift; sourceTree = "<group>"; };
 		E1352C9B2389174E00CAB39B /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		E1352C9D238917BE00CAB39B /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		E19C12C6238A6142004314C8 /* CutomImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutomImageViewerViewController.swift; sourceTree = "<group>"; };
 		E19DCC6D238958080049124A /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		E19DCC6E238958080049124A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E19DCC6F238958080049124A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
@@ -204,6 +206,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		E19C12C5238A610B004314C8 /* ImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				E19C12C6238A6142004314C8 /* CutomImageViewerViewController.swift */,
+			);
+			path = ImageViewer;
+			sourceTree = "<group>";
+		};
 		E19DCC6A238957E20049124A /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +235,7 @@
 		E1D52A8A238921AC00022941 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E19C12C5238A610B004314C8 /* ImageViewer */,
 				E1352C8C2389157200CAB39B /* ListView */,
 				E19DCC6A238957E20049124A /* DetailView */,
 			);
@@ -465,6 +476,7 @@
 				E19DCC7723896C310049124A /* Custom_Button.swift in Sources */,
 				E1352C90238915B400CAB39B /* ListViewRouter.swift in Sources */,
 				E1D52A8D238921DD00022941 /* ListTableViewCell.swift in Sources */,
+				E19C12C7238A6142004314C8 /* CutomImageViewerViewController.swift in Sources */,
 				E19DCC72238958080049124A /* DetailViewModel.swift in Sources */,
 				E19DCC71238958080049124A /* DetailViewController.swift in Sources */,
 			);

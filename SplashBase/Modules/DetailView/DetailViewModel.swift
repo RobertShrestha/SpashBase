@@ -71,4 +71,8 @@ import UIKit
         }
     }
     
+    func goToImageViewer(navigation:UINavigationController,imageURL:String){
+        self.router.gotoImageViewer(navigationContoller: navigation, imageURL: imageURL)
+    }
+    
 }

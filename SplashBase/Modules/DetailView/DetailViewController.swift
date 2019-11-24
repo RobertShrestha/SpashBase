@@ -15,12 +15,14 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imageView:UIImageView!
     @IBOutlet weak var favouriteBtn:UIButton!
     @IBOutlet weak var nameLblTxt:UILabel!
-    @IBOutlet var playBtn: UIButton!
+    @IBOutlet var playBtn: UIImageView!
     
     @IBOutlet var copyRightLblTxt: UILabel!
     
     @IBOutlet var sourceLblTxt: UILabel!
     var bRec:Bool = true
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,7 @@ class DetailViewController: UIViewController {
         
         self.nameLblTxt.text = self.viewModel?.imageName
         if let url = self.viewModel?.largeUrl{
-            playBtn.isHidden = !url.isMp4URL
+            playbuttonHandler(url)
             if url.isMp4URL{
             
                 self.imageView.kf.setImage(with: URL(string: (self.viewModel?.url)!))
@@ -58,6 +60,10 @@ class DetailViewController: UIViewController {
         //        player.play()
         
         
+    }
+    
+    fileprivate func playbuttonHandler(_ url: String) {
+        playBtn.isHidden = !url.isMp4URL
     }
     
     
@@ -111,10 +117,7 @@ class DetailViewController: UIViewController {
         UIApplication.shared.open(url)
         
     }
-    @IBAction func playBtnTapped(_ sender: Any) {
-        
-        
-        
+    fileprivate func playVideoInAVPLayer() {
         //let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
         
         let videoURL = URL(string: self.viewModel?.largeUrl ?? "")
@@ -125,6 +128,20 @@ class DetailViewController: UIViewController {
         self.present(playerViewController, animated: true) {
             playerViewController.player!.play()
         }
+    }
+    
+    @IBAction func playBtnTapped(_ sender: Any) {
+        
+        guard let url = self.viewModel?.largeUrl else { return }
+        
+            if url.isMp4URL{
+                 playVideoInAVPLayer()
+            }else{
+                viewModel?.goToImageViewer(navigation: self.navigationController!, imageURL: url)
+        }
+                
+        
+       
     }
     
     @IBAction func favBtnPressed(_ sender: Any) {
