@@ -72,7 +72,13 @@ import UIKit
     }
     
     func goToImageViewer(navigation:UINavigationController,imageURL:String){
-        self.router.gotoImageViewer(navigationContoller: navigation, imageURL: imageURL)
+        self.router.goToView(navigations: .imageViewer(imageURL), navigationController: navigation)
     }
-    
+    func openLinkInBrowswer(){
+        guard let url = URL(string: largeUrl ?? "") else { return }
+       self.router.goToView(navigations: .openInBrowser(url), navigationController: nil)
+    }
+    func share(navigationController:UINavigationController){
+        self.router.goToView(navigations: .share(id), navigationController: navigationController)
+    }
 }

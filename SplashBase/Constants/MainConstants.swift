@@ -31,18 +31,7 @@ struct Configs{
       
         
     }
-    struct BaseDimensions {
-//        static let inset: CGFloat = 10
-//        static let tabBarHeight: CGFloat = 58
-//        static let toolBarHeight: CGFloat = 66
-//        static let navBarWithStatusBarHeight: CGFloat = 64
-//        static let cornerRadius: CGFloat = 20
-//        static let borderWidth: CGFloat = 1
-//        static let buttonHeight: CGFloat = 50
-//        static let textFieldHeight: CGFloat = 40
-//        static let tableRowHeight: CGFloat = 50
-//        static let segmentedControlHeight: CGFloat = 30
-    }
+   
     
     public enum ImageAPIs:String{
         case latest = "images/latest"

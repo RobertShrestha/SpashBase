@@ -39,26 +39,7 @@ class DetailViewController: UIViewController {
             }
         }
         
-        
-        
-        
-        
-        
-        //        let videoURL = URL(string: "https://splashbase.s3.amazonaws.com/mazwai/regular/joris_schaap--bee_in_ultra_slow_motion.webm%3F1400441693")
-        //
-        //        //let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
-        //        let player = AVPlayer(url: videoURL!)
-        //        let playerViewController = AVPlayerViewController()
-        //        playerViewController.player = player
-        //        self.present(playerViewController, animated: true) {
-        //            playerViewController.player!.play()
-        //        }
-        //        let player = AVPlayer(url: videoURL!)
-        //        let playerLayer = AVPlayerLayer(player: player)
-        //        playerLayer.frame = self.view.bounds
-        //        self.view.layer.addSublayer(playerLayer)
-        //        player.play()
-        
+
         
     }
     
@@ -92,32 +73,19 @@ class DetailViewController: UIViewController {
     }
     @IBAction func shareBtnTapped(_ sender: Any) {
         
-        let firstActivityItem = "Check this out \n"
-        guard let id = self.viewModel?.id else { return }
-        print(id)
-        let secondActivityItem = URL(string: "http://www.splashbase.co/images/" + id)!
         
-        let activityViewController : UIActivityViewController = UIActivityViewController(
-            activityItems: [firstActivityItem, secondActivityItem], applicationActivities: nil)
-        
-        
-        activityViewController.popoverPresentationController?.sourceView = (sender as! UIButton)
-        
-        activityViewController.popoverPresentationController?.sourceRect = CGRect(x: 150, y: 150, width: 0, height: 0)
-        
-        
-        
-        self.present(activityViewController, animated: true, completion: nil)
+        viewModel?.share(navigationController: self.navigationController!)
         
         print("Share Btn Pressed")
     }
     @IBAction func downBtnTapped(_ sender: Any) {
         print("Download Btn Pressed")
-        guard let url = URL(string: self.viewModel?.largeUrl ?? "") else { return }
-        UIApplication.shared.open(url)
+       self.viewModel?.openLinkInBrowswer()
         
     }
     fileprivate func playVideoInAVPLayer() {
+        
+        //Use this link to test the player
         //let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
         
         let videoURL = URL(string: self.viewModel?.largeUrl ?? "")

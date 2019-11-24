@@ -27,7 +27,6 @@
 		E19DCC71238958080049124A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19DCC6E238958080049124A /* DetailViewController.swift */; };
 		E19DCC72238958080049124A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19DCC6F238958080049124A /* DetailViewModel.swift */; };
 		E19DCC742389647D0049124A /* UIString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19DCC732389647D0049124A /* UIString+Extension.swift */; };
-		E19DCC7723896C310049124A /* Custom_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19DCC7623896C310049124A /* Custom_Button.swift */; };
 		E19DCC7A23896C990049124A /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19DCC7923896C990049124A /* UIButton+Extension.swift */; };
 		E1D52A8D238921DD00022941 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D52A8C238921DD00022941 /* ListTableViewCell.swift */; };
 		E1D52A9123892A5D00022941 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D52A9023892A5D00022941 /* WebServices.swift */; };
@@ -73,7 +72,6 @@
 		E19DCC6E238958080049124A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E19DCC6F238958080049124A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		E19DCC732389647D0049124A /* UIString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIString+Extension.swift"; sourceTree = "<group>"; };
-		E19DCC7623896C310049124A /* Custom_Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom_Button.swift; sourceTree = "<group>"; };
 		E19DCC7923896C990049124A /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		E1D52A8C238921DD00022941 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		E1D52A9023892A5D00022941 /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
@@ -227,7 +225,6 @@
 		E19DCC7523896C1A0049124A /* Custom Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E19DCC7623896C310049124A /* Custom_Button.swift */,
 			);
 			path = "Custom Classes";
 			sourceTree = "<group>";
@@ -473,7 +470,6 @@
 				E1352C9C2389174E00CAB39B /* UIViewController+Extensions.swift in Sources */,
 				E1352C962389160900CAB39B /* LibManager.swift in Sources */,
 				E1352C92238915B400CAB39B /* ListViewModel.swift in Sources */,
-				E19DCC7723896C310049124A /* Custom_Button.swift in Sources */,
 				E1352C90238915B400CAB39B /* ListViewRouter.swift in Sources */,
 				E1D52A8D238921DD00022941 /* ListTableViewCell.swift in Sources */,
 				E19C12C7238A6142004314C8 /* CutomImageViewerViewController.swift in Sources */,

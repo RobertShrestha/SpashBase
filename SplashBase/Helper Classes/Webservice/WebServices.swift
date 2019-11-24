@@ -44,16 +44,7 @@ class WebServiceImp:NSObject, WebService{
     
     func postRequestWithoutHeaderAPI(withParameter param: [String : Any], fromURL url: String,completionHandler: @escaping (Result<DefaultDataResponse?>)-> Void){
             
-//            Alamofire.request(url, method: .post, parameters: param, headers: nil)
-//                .validate()
-//                .responseJSON { response in
-//                    print(response.result.value as Any)
-////                    if response.error == nil{
-////                        fulfilled.fulfill(response)
-////                    }else{
-////                        fulfilled.reject(response.error!)
-////                    }
-//            }
+
             
                         Alamofire.request(url, method: .post, parameters: param, headers: nil)
                             .validate()
@@ -90,20 +81,7 @@ class WebServiceImp:NSObject, WebService{
     
   
     
-    //    func postRequestWithoutHeaderAPI<T>(withParameter param: [String : Any], fromURL url: String) -> Promise<DefaultDataResponse> where T : Decodable {
-    //        return Promise { fulfilled  in
-    //
-    //            Alamofire.request(url, method: .post, parameters: param, headers: nil)
-    //                .validate()
-    //                .response { response in
-    //                    if response.error == nil{
-    //                        fulfilled.fulfill(response)
-    //                    }else{
-    //                        fulfilled.reject(response.error!)
-    //                    }
-    //            }
-    //        }
-    //    }
+   
     
    
     
