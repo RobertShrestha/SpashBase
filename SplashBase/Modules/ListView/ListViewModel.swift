@@ -12,8 +12,8 @@ import UIKit
 public class ListViewModel: NSObject{
     
     var router = ListViewRouter()
+
     
-    var webService = WebServiceImp()
     
     var images = [ListModel]()
     var filteredImages = [ListModel]()
@@ -37,44 +37,35 @@ extension ListViewModel{
         cell.setupCell(image: image)
         return cell
     }    
-    func getList(completionHandler:@escaping (Result<Bool,Error>)->Void){
+    func getList(completionHandler:@escaping (Result<Bool,NetworkError>)->Void){
         
-        let param = ["":""]
-        
-        let baseURL = Configs.Network.BASE_URL
-        let url = baseURL + Configs.ImageAPIs.latest.rawValue
-        print(url)
-        
-        webService.getRequestWithoutHeaderAPI(type: LatestModel.self, withParameter: param, fromURL: url) { (result) in
+        WebServices().load(resource: LatestModel.all) { (result) in
             switch result{
                 
             case .success(let value):
                 var status = Bool()
-                guard let value = value?.images else { completionHandler(.success(false)); return}
+                guard let value = value.images else {
+                    completionHandler(.success(false))
+                    return
+                }
                 status = (value.count > 0) ? true : false
                 print(value.count)
                 self.images = value
                 completionHandler(.success(status))
-                
-                
             case .failure(let error):
                 print(error)
-                print(error.localizedDescription)
                 completionHandler(.failure(error))
             }
         }
+     
     }
     
     
     func getSearchList(queryString query:String,completionHandler:@escaping (Result<Bool,Error>)->Void){
         
-        let param = ["query":query]
         
-        let baseURL = Configs.Network.BASE_URL
-        let url = baseURL + Configs.ImageAPIs.search.rawValue
-        print(url)
         
-        webService.getRequestWithoutHeaderAPI(type: LatestModel.self, withParameter: param, fromURL: url) { (result) in
+        WebServices().load(resource: LatestModel.search(query)) { (result) in
             switch result{
                 
             case .success(let value):
