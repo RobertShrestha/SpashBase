@@ -28,6 +28,8 @@
 		E19DCC72238958080049124A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19DCC6F238958080049124A /* DetailViewModel.swift */; };
 		E19DCC742389647D0049124A /* UIString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19DCC732389647D0049124A /* UIString+Extension.swift */; };
 		E19DCC7A23896C990049124A /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19DCC7923896C990049124A /* UIButton+Extension.swift */; };
+		E1D2A97823A673CC0026CCAD /* DetailAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2A97723A673CC0026CCAD /* DetailAPIClient.swift */; };
+		E1D2A97B23A67B200026CCAD /* DetailViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2A97A23A67B200026CCAD /* DetailViewTests.swift */; };
 		E1D52A8D238921DD00022941 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D52A8C238921DD00022941 /* ListTableViewCell.swift */; };
 		E1D52A9123892A5D00022941 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D52A9023892A5D00022941 /* WebServices.swift */; };
 		E1D52A9523892B9200022941 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D52A9423892B9200022941 /* ListModel.swift */; };
@@ -73,6 +75,8 @@
 		E19DCC6F238958080049124A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		E19DCC732389647D0049124A /* UIString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIString+Extension.swift"; sourceTree = "<group>"; };
 		E19DCC7923896C990049124A /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		E1D2A97723A673CC0026CCAD /* DetailAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAPIClient.swift; sourceTree = "<group>"; };
+		E1D2A97A23A67B200026CCAD /* DetailViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewTests.swift; sourceTree = "<group>"; };
 		E1D52A8C238921DD00022941 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		E1D52A9023892A5D00022941 /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		E1D52A9423892B9200022941 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 		E1352C802389094A00CAB39B /* SplashBaseTests */ = {
 			isa = PBXGroup;
 			children = (
+				E1D2A97923A679470026CCAD /* DetailMockView */,
 				E1352C812389094A00CAB39B /* SplashBaseTests.swift */,
 				E1352C832389094A00CAB39B /* Info.plist */,
 			);
@@ -218,6 +223,7 @@
 				E19DCC6D238958080049124A /* DetailRouter.swift */,
 				E19DCC6E238958080049124A /* DetailViewController.swift */,
 				E19DCC6F238958080049124A /* DetailViewModel.swift */,
+				E1D2A97723A673CC0026CCAD /* DetailAPIClient.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -227,6 +233,14 @@
 			children = (
 			);
 			path = "Custom Classes";
+			sourceTree = "<group>";
+		};
+		E1D2A97923A679470026CCAD /* DetailMockView */ = {
+			isa = PBXGroup;
+			children = (
+				E1D2A97A23A67B200026CCAD /* DetailViewTests.swift */,
+			);
+			path = DetailMockView;
 			sourceTree = "<group>";
 		};
 		E1D52A8A238921AC00022941 /* Modules */ = {
@@ -464,6 +478,7 @@
 				E19DCC70238958080049124A /* DetailRouter.swift in Sources */,
 				E19DCC7A23896C990049124A /* UIButton+Extension.swift in Sources */,
 				E1D52A9523892B9200022941 /* ListModel.swift in Sources */,
+				E1D2A97823A673CC0026CCAD /* DetailAPIClient.swift in Sources */,
 				E1D52A9123892A5D00022941 /* WebServices.swift in Sources */,
 				E1352C6D2389094900CAB39B /* AppDelegate.swift in Sources */,
 				E1352C992389163E00CAB39B /* MainConstants.swift in Sources */,
@@ -483,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1352C822389094A00CAB39B /* SplashBaseTests.swift in Sources */,
+				E1D2A97B23A67B200026CCAD /* DetailViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

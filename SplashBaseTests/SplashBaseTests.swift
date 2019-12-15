@@ -28,6 +28,29 @@ class SplashBaseTests: XCTestCase {
         XCTAssertTrue(urlString.isMp4URL)
     }
     
+    
+    func testDetail(){
+        self.measure {
+            // Put the code you want to measure the time of here.
+            self.expectation = self.expectation(description: "asynchronous request")
+//            let client = DetailAPIClient()
+             let client = MockDetailAPIClient()
+            
+            client.getImageDetail(imageID: 1, completionHandler: { (result) in
+                switch result{
+                    
+                case .success(let value):
+                    XCTAssertEqual(value?.id, 1)
+                case .failure(let error):
+                    XCTAssertThrowsError(error)
+                }
+                self.expectation?.fulfill()
+            })
+           self.waitForExpectations(timeout: 12.0, handler:nil)
+            
+        }
+    }
+    
     func testListing(){
         self.measure {
             // Put the code you want to measure the time of here.

@@ -13,6 +13,8 @@ import UIKit
     
     var router = DetailRouter()
     
+    var client = DetailAPIClient()
+    
     
     
     
@@ -48,22 +50,37 @@ import UIKit
     func getImageDetail(completionHandler:@escaping (Result<Bool,Error>)->Void){
         guard let imageID = self.image?.id else { return }
         
-        WebServices.shared.load(resource: ListModel.getImageDetail(imageID: "\(imageID)")) { (result) in
+        
+        self.client.getImageDetail(imageID: imageID) { (result) in
             switch result{
                 
             case .success(let value):
-                guard let value = value else { completionHandler(.success(false)); return}
-                
+                guard let value = value else {completionHandler(.success(false));return }
                 self.image = value
                 completionHandler(.success(true))
-                
-                
             case .failure(let error):
                 print(error)
-                print(error.localizedDescription)
-                completionHandler(.failure(error))
+               print(error.localizedDescription)
+               completionHandler(.failure(error))
             }
         }
+        
+//        WebServices.shared.load(resource: ListModel.getImageDetail(imageID: "\(imageID)")) { (result) in
+//            switch result{
+//
+//            case .success(let value):
+//                guard let value = value else { completionHandler(.success(false)); return}
+//
+//                self.image = value
+//                completionHandler(.success(true))
+//
+//
+//            case .failure(let error):
+//                print(error)
+//                print(error.localizedDescription)
+//                completionHandler(.failure(error))
+//            }
+//        }
        
         /*
         let param = ["":""]
